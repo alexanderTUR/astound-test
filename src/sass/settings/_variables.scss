@@ -1,0 +1,39 @@
+// Colors
+$color-white: #fff;
+$color-black: #000;
+$color-mine-shaft: #282828;
+$color-charade: #2c303d;
+$color-wild-sand: #f6f6f6;
+$color-brick-red: #ce2c52;
+$color-riptide: #8ae6cf;
+$color-curious-blue: #2c87ce;
+
+$color-bg-main: $color-wild-sand;
+
+$color-text-main: $color-mine-shaft;
+$color-text-bold: $color-charade;
+$color-text-headings: $color-charade;
+$color-text-accented: $color-brick-red;
+
+$color-product-blue: #78d8e7;
+$color-product-green: #96c795;
+$color-product-red: #ce92a1;
+$color-product-purple: #aa93cf;
+
+// Box-shadows
+$shadow-main: 0 0 8px 2px rgba(0, 0, 0, 0.5);
+$shadow-sharp: 0 0 5px rgba(0, 0, 0, 0.75);
+
+// Breakpoints for include-media mixins
+$breakpoints: (
+  phoneSmall: 375px,
+  phoneReg: 414px,
+  tabletSmall: 768px,
+  tabletMid: 800px,
+  tabletReg: 1024px,
+  desktopSmall: 1280px,
+  desktopMid: 1366px,
+  desktopReg: 1440px,
+  desktopBig: 1600px,
+  desktopLarge: 1920px,
+);

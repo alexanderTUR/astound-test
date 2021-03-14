@@ -1,0 +1,51 @@
+// Base styles
+// Box-sizing defaults
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: $color-text-main;
+  background-color: $color-bg-main;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 100%;
+}
+
+// Reset all CSS animation for user, who prefer less animation in browsers
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Some helper classes
+// Old IE message block
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+// Hide only visually, but have it available for screen readers
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
