@@ -1,6 +1,7 @@
 // Colors
 $color-white: #fff;
 $color-black: #000;
+$color-silver: #ccc;
 $color-mine-shaft: #282828;
 $color-charade: #2c303d;
 $color-wild-sand: #f6f6f6;
@@ -11,9 +12,12 @@ $color-curious-blue: #2c87ce;
 $color-bg-main: $color-wild-sand;
 
 $color-text-main: $color-mine-shaft;
+$color-text-darken: $color-charade;
 $color-text-bold: $color-charade;
 $color-text-headings: $color-charade;
 $color-text-accented: $color-brick-red;
+$color-borders: $color-silver;
+$color-buttons: $color-riptide;
 
 $color-product-blue: #78d8e7;
 $color-product-green: #96c795;
@@ -37,3 +41,5 @@ $breakpoints: (
   desktopBig: 1600px,
   desktopLarge: 1920px,
 );
+
+$base-font-size: 16px;

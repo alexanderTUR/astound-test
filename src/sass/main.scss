@@ -10,24 +10,11 @@
 // Global base styles
 @import 'global/base';
 
-// Elements styles
-@import 'elements/example';
-
 // Components styles
-@import 'components/example';
-
-// Blocks styles
-@import 'blocks/example';
-
-// Global page layout styles
-@import 'layouts/header';
-@import 'layouts/footer';
+@import 'components/product-card';
+@import 'components/add-to-cart-form';
+@import 'components/stars-rating-widget';
+@import 'components/social-share-widget';
 
 // Page styles
 @import 'pages/index';
-
-// Examples styles (comment out before development)
-// @import 'global/start-examples';
-
-// Debug styles (comment out before production)
-// @import 'settings/debug';

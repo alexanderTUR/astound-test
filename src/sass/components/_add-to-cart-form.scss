@@ -1,0 +1,126 @@
+// Add to cart form styles gbn
+
+.add-to-cart-form {
+}
+
+.add-to-cart-form__fieldsgroup {
+  @include media('>=tabletSmall') {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.add-to-cart-form__fieldsgroup + .add-to-cart-form__fieldsgroup {
+  margin-top: 30px;
+  @include media('>=tabletSmall') {
+    margin-top: 12px;
+  }
+}
+
+.add-to-cart-form__inputs-wrapper {
+  display: flex;
+}
+
+.add-to-cart-form__heading {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
+  @include media('>=tabletSmall') {
+    font-size: rem(14);
+    margin-bottom: 0;
+    margin-right: 15px;
+    min-width: 55px;
+  }
+  &_mobile-part {
+    @include media('>=tabletSmall') {
+      display: none;
+    }
+  }
+}
+
+.add-to-cart-form__size-input {
+  &:checked + .add-to-cart-form__size-label {
+    box-shadow: $shadow-main;
+  }
+}
+
+.add-to-cart-form__size-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid $color-borders;
+  font-size: rem(12);
+  font-weight: 700;
+  cursor: pointer;
+  @include transition(box-shadow);
+  &:not(:last-of-type) {
+    margin-right: 12px;
+  }
+}
+
+.add-to-cart-form__color-input {
+  &:checked + .add-to-cart-form__color-label {
+    box-shadow: $shadow-main;
+  }
+}
+
+.add-to-cart-form__color-label {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 0;
+  cursor: pointer;
+  @include transition(box-shadow);
+  &:not(:last-of-type) {
+    margin-right: 12px;
+  }
+  &_blue {
+    background-color: $color-product-blue;
+  }
+  &_green {
+    background-color: $color-product-green;
+  }
+  &_red {
+    background-color: $color-product-red;
+  }
+  &_purple {
+    background-color: $color-product-purple;
+  }
+}
+
+.add-to-cart-form__submit-wrapper {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 42px;
+  @include media('>=tabletSmall') {
+    margin-top: 20px;
+    max-width: 220px;
+    margin-left: 0;
+  }
+}
+
+.add-to-cart-form__submit {
+  @include resetbutton(15px 25px);
+  width: 100%;
+  background-color: $color-buttons;
+  border-radius: 50px;
+  font-size: rem(18);
+  font-weight: 700;
+  line-height: 1.72;
+  text-align: center;
+  text-transform: uppercase;
+  @include transition(box-shadow);
+  &:hover {
+    box-shadow: $shadow-main;
+  }
+  @include media('>=tabletSmall') {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+// Add to cart form styles end

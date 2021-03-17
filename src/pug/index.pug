@@ -5,5 +5,127 @@ bodyClass: template-main
 extends layouts/_main-layout
 
 block content
-  h1 HELLO WORLD
-  p Laboris dolor anim ea ipsum. Officia quis enim elit et amet Lorem irure eiusmod sunt ipsum. Dolore irure excepteur in ex.
+  section.product
+    .container
+      .product-card
+        h1.product-card__heading For gamers by gamers TEE
+        .product-card__body
+          .product-card__image
+            +spacer
+            img(srcset="img/products/product-main.jpg, img/products/product-main@2x.jpg 2x" src="img/products/product-main.jpg" alt="For gamers by gamers TEE product image." loading="lazy" width="398" height="420")
+          .product-card__content
+            .product-card__code
+              +spacer
+              span Item #: 701642853695
+            .product-card__price
+              .product-card__price_old
+                +spacer
+                span $29.50
+              .product-card__price_discount
+                +spacer
+                span $19.99
+            .product-card__rating-social-wrapper
+              .product-card__rating
+                .stars-rating-widget
+                  ul.stars-rating-widget__stars-list
+                    li.stars-rating-widget__stars-item
+                      +spacer
+                      span.stars-rating-widget__star.stars-rating-widget__star_active
+                    li.stars-rating-widget__stars-item
+                      +spacer
+                      span.stars-rating-widget__star.stars-rating-widget__star_active
+                    li.stars-rating-widget__stars-item
+                      +spacer
+                      span.stars-rating-widget__star.stars-rating-widget__star_active
+                    li.stars-rating-widget__stars-item
+                      +spacer
+                      span.stars-rating-widget__star.stars-rating-widget__star_active
+                    li.stars-rating-widget__stars-item
+                      +spacer
+                      span.stars-rating-widget__star.stars-rating-widget__star_inactive
+              .product-card__social
+                .social-share-widget
+                  +spacer
+                  button.social-share-widget__open-button(type="button") Share it!
+                  .social-share-widget__block
+                    ul.social-share-widget__list
+                      li.social-share-widget__item
+                        +spacer
+                        a.social-share-widget__link(href="#" aria-label="Share to Facebook.")
+                          +spacer
+                          img(src="img/icons/icon-facebook.svg" alt="Facebook icon")
+                          +spacer
+                      li.social-share-widget__item
+                        +spacer
+                        a.social-share-widget__link(href="#" aria-label="Share to Twitter")
+                          +spacer
+                          img(src="img/icons/icon-twitter.svg" alt="Twitter icon")
+                          +spacer
+                      li.social-share-widget__item
+                        +spacer
+                        a.social-share-widget__link(href="#" aria-label="Share to Pinterest")
+                          +spacer
+                          img(src="img/icons/icon-pinterest.svg" alt="Pinterest icon")
+                          +spacer
+                      li.social-share-widget__item
+                        +spacer
+                        a.social-share-widget__link(href="#" aria-label="Share to Youtube.")
+                          +spacer
+                          img(src="img/icons/icon-youtube.svg" alt="Youtube icon")
+                          +spacer
+                    +spacer
+                    button.social-share-widget__close-button(type="button" aria-label="Close social-share widget.")
+                      +spacer
+                      img(src="img/icons/icon-close.svg" alt="Close icon.")
+                      +spacer
+            .product-card__describe-text
+              h3.product-card__describe-heading DETAILS:
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            .product-card__form-wrapper
+              form.add-to-cart-form(action="#" method="POST")
+                .add-to-cart-form__fieldsgroup
+                  h3.add-to-cart-form__heading
+                    span.add-to-cart-form__heading_mobile-part SELECT A
+                      +space
+                    | SIzE:
+                  .add-to-cart-form__inputs-wrapper
+                    +spacer
+                    input.add-to-cart-form__size-input.visuallyhidden#sizeXS(type="radio" name="size" value="XS" checked)
+                    +spacer
+                    label.add-to-cart-form__size-label(for="sizeXS") XS
+                    +spacer
+                    input.add-to-cart-form__size-input.visuallyhidden#sizeS(type="radio" name="size" value="S")
+                    +spacer
+                    label.add-to-cart-form__size-label(for="sizeS") S
+                    +spacer
+                    input.add-to-cart-form__size-input.visuallyhidden#sizeM(type="radio" name="size" value="M")
+                    +spacer
+                    label.add-to-cart-form__size-label(for="sizeM") M
+                .add-to-cart-form__fieldsgroup
+                  h3.add-to-cart-form__heading
+                    span.add-to-cart-form__heading_mobile-part SELECT a
+                      +space
+                    | color:
+                  .add-to-cart-form__inputs-wrapper
+                    +spacer
+                    input.add-to-cart-form__color-input.visuallyhidden#colorBlue(type="radio" name="color" value="blue" checked)
+                    +spacer
+                    label.add-to-cart-form__color-label.add-to-cart-form__color-label_blue(for="colorBlue") blue
+                    +spacer
+                    input.add-to-cart-form__color-input.visuallyhidden#colorGreen(type="radio" name="color" value="green")
+                    +spacer
+                    label.add-to-cart-form__color-label.add-to-cart-form__color-label_green(for="colorGreen") green
+                    +spacer
+                    input.add-to-cart-form__color-input.visuallyhidden#colorRed(type="radio" name="color" value="red")
+                    +spacer
+                    label.add-to-cart-form__color-label.add-to-cart-form__color-label_red(for="colorRed") red
+                    +spacer
+                    input.add-to-cart-form__color-input.visuallyhidden#colorPurple(type="radio" name="color" value="purple")
+                    +spacer
+                    label.add-to-cart-form__color-label.add-to-cart-form__color-label_purple(for="colorPurple") purple
+                .add-to-cart-form__submit-wrapper
+                  +spacer
+                  button.add-to-cart-form__submit(type="submit") add to cart
+
+
+
