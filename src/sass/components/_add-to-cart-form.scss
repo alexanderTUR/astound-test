@@ -1,8 +1,5 @@
 // Add to cart form styles gbn
 
-.add-to-cart-form {
-}
-
 .add-to-cart-form__fieldsgroup {
   @include media('>=tabletSmall') {
     display: flex;
@@ -22,14 +19,15 @@
 }
 
 .add-to-cart-form__heading {
-  text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: rem(0.8);
   @include media('>=tabletSmall') {
-    font-size: rem(14);
-    margin-bottom: 0;
+    min-width: 58px;
     margin-right: 15px;
-    min-width: 55px;
+    margin-bottom: 0;
+    font-size: rem(14);
   }
   &_mobile-part {
     @include media('>=tabletSmall') {
@@ -93,33 +91,13 @@
 
 .add-to-cart-form__submit-wrapper {
   max-width: 280px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 42px;
+  margin-right: auto;
+  margin-left: auto;
   @include media('>=tabletSmall') {
-    margin-top: 20px;
     max-width: 220px;
+    margin-top: 20px;
     margin-left: 0;
-  }
-}
-
-.add-to-cart-form__submit {
-  @include resetbutton(15px 25px);
-  width: 100%;
-  background-color: $color-buttons;
-  border-radius: 50px;
-  font-size: rem(18);
-  font-weight: 700;
-  line-height: 1.72;
-  text-align: center;
-  text-transform: uppercase;
-  @include transition(box-shadow);
-  &:hover {
-    box-shadow: $shadow-main;
-  }
-  @include media('>=tabletSmall') {
-    padding-top: 7px;
-    padding-bottom: 7px;
   }
 }
 

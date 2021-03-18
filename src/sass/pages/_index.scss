@@ -1,22 +1,115 @@
 // Index page styles bgn
 
-.page-main {
+.product {
+  margin-bottom: 44px;
   .container {
-    &:first-child {
-      padding-top: 38px;
+    padding-top: 38px;
+  }
+}
+
+.related-products {
+  .container {
+    padding-bottom: 38px;
+  }
+  .swiper-container {
+    @include media('<tabletSmall') {
+      padding-top: 24px;
+      padding-right: 60px;
+      padding-left: 60px;
+      margin-right: -38px;
+      margin-left: -38px;
     }
-    &:last-child {
-      padding-bottom: 38px;
+    @include media('>=tabletSmall') {
+      overflow: visible;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include resetbutton();
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    top: 50%;
+    will-change: transform;
+    transform: translateY(-50%);
+    @include transition(transform);
+    @include media('>=tabletSmall') {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .swiper-button-prev {
+    left: 20px;
+    transform: translateY(-50%) rotate(180deg);
+    &:hover,
+    &:focus {
+      transform: translateY(-50%) rotate(180deg) scale(1.2);
+    }
+  }
+  .swiper-button-next {
+    right: 20px;
+    &:hover,
+    &:focus {
+      transform: translateY(-50%) scale(1.2);
     }
   }
 }
 
-.container {
-  padding-left: 38px;
-  padding-right: 38px;
-  max-width: 911px;
-  margin-left: auto;
-  margin-right: auto;
+.related-products__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: rem(24);
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: rem(1.2);
+  text-align: center;
+  @include media('>=tabletSmall') {
+    margin-bottom: 36px;
+    font-size: rem(22);
+    line-height: 1.48;
+    letter-spacing: rem(1.65);
+  }
+  @include media('>tabletReg') {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}
+
+.related-products__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  @include media('>=tabletSmall') {
+    width: auto;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-bottom: -30px;
+    margin-left: -20px;
+  }
+  @include media('>tabletReg') {
+    margin-right: -10px;
+    margin-bottom: -26px;
+    margin-left: -10px;
+  }
+}
+
+.related-products__item {
+  @include media('>=tabletSmall') {
+    width: calc(100% / 2 - 40px);
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+  @include media('>tabletReg') {
+    width: calc(100% / 3 - 20px);
+    margin-right: 10px;
+    margin-bottom: 26px;
+    margin-left: 10px;
+  }
 }
 
 // Index pag= styles end

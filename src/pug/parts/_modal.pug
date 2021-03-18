@@ -1,0 +1,18 @@
+#addToCartFormResult.modal.micromodal-slide(aria-hidden="true")
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+    .modal__container(role="dialog" aria-modal="true" aria-labelledby="modalTitle")
+      header.modal__header
+        h2#modalTitle.modal__title Item successfully added to Your cart!
+      #modalContent.modal__content
+        dl
+          dt Your item name is:
+          dd#itemName name
+          dt Your item code is:
+          dd#itemPrice price
+          dt Your item size is:
+          dd#itemSize size
+          dt Your item color is:
+          dd#itemColor color
+      footer.modal__footer
+        +spacer
+        button.modal__btn.btn(data-micromodal-close aria-label="Close this dialog window") Close

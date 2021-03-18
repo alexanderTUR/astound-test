@@ -24,6 +24,8 @@ gulp.task('js:bundle', () =>
     .src([
       //  - Swiper slider - https://swiperjs.com/)
       `${config.nodeModules}/swiper/swiper-bundle.js`,
+      //  - Micromodal plugin (lightweight modal - https://micromodal.now.sh/)
+      `${config.nodeModules}/micromodal/dist/micromodal.js`,
     ])
     // error handler
     .on('error', config.errorHandler)

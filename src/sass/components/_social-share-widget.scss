@@ -15,21 +15,21 @@
     font-size: rem(18);
     font-weight: 700;
     line-height: 0.89;
-    letter-spacing: 0.45px;
+    letter-spacing: rem(0.45);
   }
 }
 
 .social-share-widget__block {
   @include media('>tabletReg') {
     position: absolute;
-    padding: 23px 18px 18px;
-    filter: drop-shadow($shadow-sharp);
-    background-color: $color-white;
     display: flex;
     align-items: center;
     left: 50%;
     top: 30px;
     transform: translateX(-50%);
+    padding: 22px 18px 18px;
+    background-color: $color-white;
+    filter: drop-shadow($shadow-sharp);
     opacity: 0;
     pointer-events: none;
     @include transition(opacity);
@@ -41,21 +41,21 @@
       content: '';
       position: absolute;
       top: -7px;
-      triangle: pointing-up;
+      left: 50%;
       width: 15px;
       height: 7px;
-      background-color: $color-white;
-      left: 50%;
       transform: translate(-50%);
+      triangle: pointing-up;
+      background-color: $color-white;
     }
   }
 }
 
 .social-share-widget__list {
-  list-style-type: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
+  list-style-type: none;
   @include media('>=tabletSmall', '<=tabletReg') {
     flex-direction: column;
   }
@@ -67,8 +67,8 @@
 .social-share-widget__item + .social-share-widget__item {
   margin-left: 16px;
   @include media('>=tabletSmall', '<=tabletReg') {
-    margin-left: 0;
     margin-top: 10px;
+    margin-left: 0;
   }
   @include media('>tabletReg') {
     margin-left: 12px;
@@ -80,9 +80,8 @@
   width: 41px;
   height: 41px;
   border-radius: 50%;
-  overflow: hidden;
-  @include transition(all);
   will-change: transform;
+  @include transition(all);
   &:hover,
   &:focus {
     box-shadow: $shadow-main;
@@ -101,12 +100,12 @@
 .social-share-widget__close-button {
   display: none;
   @include media('>tabletReg') {
-    display: block;
     @include resetbutton();
+    display: block;
     width: 28px;
     height: 28px;
-    @include transition(transform);
     will-change: transform;
+    @include transition(transform);
     &:hover {
       transform: scale(1.1);
     }

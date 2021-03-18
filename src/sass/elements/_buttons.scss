@@ -1,0 +1,23 @@
+// Buttons styles bgn
+
+.btn {
+  @include resetbutton(15px 25px);
+  width: 100%;
+  background-color: $color-buttons;
+  border-radius: 50px;
+  font-size: rem(18);
+  font-weight: 700;
+  line-height: 1.72;
+  text-align: center;
+  text-transform: uppercase;
+  @include transition(box-shadow);
+  &:hover {
+    box-shadow: $shadow-main;
+  }
+  @include media('>=tabletSmall') {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+// Buttons styles end

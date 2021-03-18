@@ -102,7 +102,6 @@
   border: none;
   margin: 0;
   padding: $padding;
-  width: auto;
   background: transparent;
   cursor: pointer;
   appearance: none;
@@ -121,16 +120,12 @@
 
 // paddings for conatiners
 @mixin container-pad {
-  padding-left: 16px;
-  padding-right: 16px;
-  @include media('>=tabletSmall', '<tabletReg') {
-    padding-left: 58px;
-    padding-right: 58px;
-  }
+  padding-left: 38px;
+  padding-right: 38px;
 }
 
 // limit width for containers
-@mixin container-lim($width: 1212px, $media: '>=tabletReg') {
+@mixin container-lim($width: 911px, $media: '>=tabletReg') {
   @include media($media) {
     max-width: $width;
     margin-left: auto;

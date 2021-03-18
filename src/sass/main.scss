@@ -10,11 +10,15 @@
 // Global base styles
 @import 'global/base';
 
+// Elements styles
+@import 'elements/buttons';
+
 // Components styles
 @import 'components/product-card';
 @import 'components/add-to-cart-form';
 @import 'components/stars-rating-widget';
 @import 'components/social-share-widget';
+@import 'components/related-product-card';
 
 // Page styles
 @import 'pages/index';

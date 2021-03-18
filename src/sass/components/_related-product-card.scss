@@ -1,0 +1,91 @@
+// Related product card styles bgn
+
+.related-product-card {
+  position: relative;
+}
+
+.related-product-card__link {
+  &:hover {
+    ~ .related-product-card__image-price-container .related-product-card__image {
+      box-shadow: $shadow-main;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+.related-product-card__image-price-container {
+  position: relative;
+  margin-bottom: 14px;
+  @include media('>=tabletSmall', '<=tabletReg') {
+    margin-bottom: 16px;
+  }
+}
+
+.related-product-card__image {
+  @include transition(box-shadow);
+  img {
+    width: 100%;
+  }
+}
+
+.related-product-card__price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2px 10px;
+  color: $color-text-bold;
+  background-color: rgba($color-riptide, 0.8);
+  text-align: center;
+  font-size: rem(18);
+  font-weight: 700;
+  line-height: 1.48;
+  letter-spacing: rem(1.65);
+  @include media('>=tabletSmall') {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: rem(22);
+  }
+  @include media('>tabletReg') {
+    bottom: 20px;
+    left: auto;
+    font-size: rem(16);
+    letter-spacing: rem(1.2);
+    background-color: $color-riptide;
+  }
+  &_old {
+    display: none;
+    margin-right: 12px;
+    text-decoration: line-through;
+    @include media('>tabletReg') {
+      display: inline;
+    }
+  }
+  &_discount {
+    color: $color-text-accented;
+  }
+}
+
+.related-product-card__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.13;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: rem(0.8);
+  @include media('>tabletReg') {
+    font-size: rem(14);
+    line-height: 1.29;
+    letter-spacing: rem(0.7);
+  }
+}
+
+// Related product card styles end

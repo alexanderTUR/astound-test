@@ -50,12 +50,14 @@ body {
   white-space: nowrap;
 }
 
+// Global image style
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
+// Global headings style
 h1,
 h2,
 h3,
@@ -68,4 +70,10 @@ h6 {
 
 h1 {
   font-family: 'Oswald', Arial, sans-serif;
+}
+
+// Main container style
+.container {
+  @include container-lim();
+  @include container-pad();
 }
